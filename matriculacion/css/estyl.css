@@ -1,0 +1,66 @@
+		
+		
+.tab { background-color:#999;
+color:#FFFFFF;
+text-align:right;
+	
+	}
+	
+	.tabl {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	background-color: #05012E;
+	text-align:center;
+	font-weight: bold;
+}
+.cont {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #CCC;
+	text-align:center
+}
+.texto {
+	font-family:Arial, Helvetica, sans-serif;
+	color: #003;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+/* Paginacion*/
+
+#actual {
+	color:#993300;
+	font-weight:600;
+}
+
+a {
+	color:#0066CC;
+	text-decoration:none;
+}
+a:hover {
+	color:#000066;
+}
+
+.numPages {
+	border:1px solid #999999;
+	padding:0.3em 0.4em;
+}
+
+.numPages:hover {
+	background:#CCCCCC;
+}
+
+.marco {
+	background-color:#001A0D;
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align:center;
+	font-weight: bold;
+	
+	}
+.marco1 { background-color:#CCFEA7;
+font-family:Arial, Helvetica, sans-serif;
+color:#000000;
+text-align:center;
+	
+	}
