@@ -11,7 +11,7 @@ class Docente
     //Implementamos un metodo para insertr registros
     public function insertar($nombre, $apellido, $telefono, $celular, $imagen, $fech_nac, $sexo, $ci, $email, $especialidad, $departamento, $provincia, $distrito, $activo)
     {
-        echo $sql = "INSERT INTO docentes (nombre, apellido, telefono, celular, imagen, fech_nac, sexo, ci, email, especialidad, departamento, provincia, distrito, activo)
+         $sql = "INSERT INTO docentes (nombre, apellido, telefono, celular, imagen, fech_nac, sexo, ci, email, especialidad, departamento, provincia, distrito, activo)
         VALUES ('$nombre', '$apellido', '$telefono', '$celular', '$imagen', '$fech_nac', '$sexo', '$ci', '$email', '$especialidad', '$departamento', '$provincia', '$distrito', '$activo')";
 
       return ejecutarConsulta($sql);

@@ -102,7 +102,7 @@ switch ($_GET["op"]) {
         break;
         case 'selectPais':
             $rspta = $alumno->listartodo("lista_paises");
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id.'>'.$reg->opcion.'</option>';
             }
@@ -111,7 +111,7 @@ switch ($_GET["op"]) {
           case 'selectCiudad':
 
             $rspta = $alumno->listartodo("ciudades");
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id.'>'.$reg->nombre.'</option>';
             }
@@ -119,7 +119,7 @@ switch ($_GET["op"]) {
           case 'naCiudad':
 
             $rspta = $alumno->listarid("lista_estados", $_POST['id']);
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id.'>'.$reg->opcion.'</option>';
             }
@@ -127,7 +127,7 @@ switch ($_GET["op"]) {
           case 'naProvincia':
 
             $rspta = $alumno->listarid("lista_provincias", $_POST['id']);
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id.'>'.$reg->opcion.'</option>';
             }
@@ -135,7 +135,7 @@ switch ($_GET["op"]) {
           case 'Provincia':
 
             $rspta = $alumno->listarid("provincias", $_POST['id']);
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id.'>'.$reg->opcion.'</option>';
             }
@@ -143,7 +143,7 @@ switch ($_GET["op"]) {
           case 'Distrito':
 
             $rspta = $alumno->listartodo("distritos");
-
+            echo  '<option value=""></option>';
             while ($reg = $rspta->fetch_object()) {
               echo '<option value='.$reg->id_d.'>'.$reg->opcion.'</option>';
             }

@@ -146,20 +146,20 @@ include 'header.php';
 
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label> Pais(*):</label>
-                            <select data-placeholder="Seleccion su Pais..." class="form-control"  name="napais" id="napais" required>
+                            <select class="chosen-select" data-placeholder="Seleccione el Pais..."  name="napais" id="napais" required>
                                 <option>Elija su Pais</option>
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Departamento(*):</label>
-                            <select class="form-control" name="naciudad" id="naciudad"  required>
+                            <select class="chosen-select" data-placeholder="Seleccione Departamento..."  name="naciudad" id="naciudad"  required>
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Provincia(*):</label>
-                            <select class="form-control"  name="naprovincia" id="naprovincia" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Provincia..."   name="naprovincia" id="naprovincia" required>
 
                             </select>
                           </div>
@@ -173,19 +173,19 @@ include 'header.php';
 
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Ciudad(*):</label>
-                            <select class="form-control"  name="ciudad" id="ciudad" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Ciudad..."   name="ciudad" id="ciudad" required>
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Provincia(*):</label>
-                            <select class="form-control" name="provincia" id="provincia" required >
+                            <select class="chosen-select" data-placeholder="Seleccione Provincia..."  name="provincia" id="provincia" required >
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Distrito(*):</label>
-                            <select class="form-control"  name="distrito" id="distrito" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Distrito..."   name="distrito" id="distrito" required>
 
                             </select>
                           </div>

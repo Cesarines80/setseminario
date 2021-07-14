@@ -100,7 +100,7 @@ include 'header.php';
 
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Materia(*):</label>
-                            <select class="form-control"  name="id_mat" id="id_mat" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Materia..."   name="id_mat" id="id_mat" required>
 
                             </select>
 
@@ -119,7 +119,7 @@ include 'header.php';
                       <div class="form-row">
                       <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Docente(*):</label>
-                            <select class="form-control"  name="docente" id="docente" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Docente..."   name="docente" id="docente" required>
 
                             </select>
 

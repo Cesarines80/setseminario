@@ -106,12 +106,12 @@ function init() {
 //Función limpiar
 function limpiar() {
     $("#id_his").val("");
-    $("#id_alm").val("1").trigger("chosen:updated");;
-    $("#id_mat").val("1").trigger("chosen:updated");;
+    $("#id_alm").val("").trigger("chosen:updated");;
+    $("#id_mat").val("").trigger("chosen:updated");;
     $("#nota").val("");
     $("#fecha").val("");
     $("#not").text("");
-    $("#docente").val("1").trigger("chosen:updated");;
+    $("#docente").val("").trigger("chosen:updated");;
 
 
 }

@@ -7,11 +7,11 @@ class conexion {
 
             private $dbhost = 'localhost';
 
-            private $dbuser = 'db_sistema';
+            private $dbuser = 'setbolivia_seti';
 
-            private $dbpass = 'Casimiro11';
+            private $dbpass = 'Casimiro11#';
 
-            private $dbname = 'setboliv_set';
+            private $dbname = 'setbolivia_set';
 
             public function conexion () {
 
