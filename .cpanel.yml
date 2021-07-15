@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/setbolivia/public_html/
-    - /bin/rsync -av $DEPLOYPATH
+    - /bin/rsync -av setbolivia/ $DEPLOYPATH
