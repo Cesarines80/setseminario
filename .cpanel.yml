@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPAT=/home/setbolivia/public_html/
-    - /bin/cp repositories/setseminario/ $DEPLOYPAT
+    - /bin/rsync -av setseminario/ $DEPLOYPAT
