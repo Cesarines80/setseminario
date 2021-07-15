@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/setbolivia/public_html/
-    - /bin/cp -R setseminario $DEPLOYPATH
+    - /bin/cp -R  $DEPLOYPATH
