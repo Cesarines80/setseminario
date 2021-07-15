@@ -153,13 +153,13 @@ include 'header.php';
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Departamento(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Departamento..."  name="naciudad" id="naciudad"  required>
+                            <select class="form-control" data-placeholder="Seleccione Departamento..."  name="naciudad" id="naciudad"  required>
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Provincia(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Provincia..."   name="naprovincia" id="naprovincia" required>
+                            <select class="form-control" data-placeholder="Seleccione Provincia..."   name="naprovincia" id="naprovincia" required>
 
                             </select>
                           </div>
@@ -179,13 +179,13 @@ include 'header.php';
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Provincia(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Provincia..."  name="provincia" id="provincia" required >
+                            <select class="form-control" data-placeholder="Seleccione Provincia..."  name="provincia" id="provincia" required >
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Distrito(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Distrito..."   name="distrito" id="distrito" required>
+                            <select class="form-control" data-placeholder="Seleccione Distrito..."   name="distrito" id="distrito" required>
 
                             </select>
                           </div>
