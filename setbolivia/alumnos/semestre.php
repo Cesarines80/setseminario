@@ -108,4 +108,5 @@ $semestre = $obj->get_registrover($_SESSION['id_alm']);
     <script src="../dist/js/pages/dashboard2.js"></script>
 </body>
 
+
 </html>
