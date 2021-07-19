@@ -5,7 +5,7 @@
 						<span class="full-reset titles1">Recursos educativos</span>
 						<ul class="list-unstyled full-reset">
 							
-							<li><a href="http://set.marilyn.aqp.red/" class="open-link-newTab"><i class="fa fa-graduation-cap"></i>&nbsp; Plataforma (Virtual)</a></li>
+							<li><a href="https://seminario.setbolivia.org" class="open-link-newTab"><i class="fa fa-graduation-cap"></i>&nbsp; Plataforma (Virtual)</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-4">
