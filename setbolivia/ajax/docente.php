@@ -38,7 +38,7 @@ switch ($_GET["op"]) {
             move_uploaded_file($_FILES['imagen']['tmp_name'], "../files/docentes/".$imagen);
         }
     }
-        if (empty($id_alm)) {
+        if (empty($id_doc)) {
             $rspta = $docente->insertar($nombre, $apellido, $telefono, $celular, $imagen, $fech_nac, $sexo, $ci, $email, $especialidad, $departamento, $provincia, $distrito, $activo);
 
             echo $rspta? "Docente registrado":"Docente no se pudo registrar";

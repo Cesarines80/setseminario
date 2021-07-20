@@ -12,7 +12,7 @@
               <div class="card-body box-profile">
                 <div class="text-center">
                   <img class="profile-user-img img-fluid img-circle"
-                       src="../dist/img/user4-128x128.jpg"
+                       src="../files/docentes/<?php echo $docente[0]['imagen']; ?>"
                        alt="User profile picture">
                 </div>
 

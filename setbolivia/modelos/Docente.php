@@ -11,7 +11,7 @@ class Docente
     //Implementamos un metodo para insertr registros
     public function insertar($nombre, $apellido, $telefono, $celular, $imagen, $fech_nac, $sexo, $ci, $email, $especialidad, $departamento, $provincia, $distrito, $activo)
     {
-         $sql = "INSERT INTO docentes (nombre, apellido, telefono, celular, imagen, fech_nac, sexo, ci, email, especialidad, departamento, provincia, distrito, activo)
+        $sql = "INSERT INTO docentes (nombre, apellido, telefono, celular, imagen, fech_nac, sexo, ci, email, especialidad, departamento, provincia, distrito, activo)
         VALUES ('$nombre', '$apellido', '$telefono', '$celular', '$imagen', '$fech_nac', '$sexo', '$ci', '$email', '$especialidad', '$departamento', '$provincia', '$distrito', '$activo')";
 
       return ejecutarConsulta($sql);
@@ -19,12 +19,12 @@ class Docente
     //Implementamos un metodo para editar registros
     public function editar($id_doc, $nombre, $apellido, $telefono, $celular, $imagen, $fech_nac, $sexo, $ci, $email, $especialidad, $departamento, $provincia, $distrito, $activo)
     {
-        $sql = "UPDATE docentes SET
+      $sql = "UPDATE docentes SET
         nombre ='$nombre', apellido='$apellido', telefono='$telefono',
         celular = '$celular', imagen='$imagen', fech_nac ='$fech_nac', sexo='$sexo', ci='$ci', email='$email', especialidad='$especialidad',
         departamento='$departamento', provincia='$provincia',
         distrito='$distrito', activo='$activo'
-        WHERE id_alm = '$id_doc'";
+        WHERE id_doc = '$id_doc'";
 
         return ejecutarConsulta($sql);
     }
