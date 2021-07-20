@@ -36,9 +36,16 @@
 
                                           $por = array_sum(array_column($promo, 'nota'));
 
+                                          if($por == 0){
+                                              echo "0%";
+                                          }else{
+
+
+
                                           $er = count($promo);
                                           $promedios = $por / $er ;
                                           echo  round($promedios,2);
+                                        }
 
                                         ?>
 
@@ -57,7 +64,7 @@
 
                                     <div class="info-box-content">
                                         <span class="info-box-text">Reconocimientos</span>
-                                        <span class="info-box-number">760</span>
+                                        <span class="info-box-number">0</span>
                                     </div>
                                     <!-- /.info-box-content -->
                                 </div>
