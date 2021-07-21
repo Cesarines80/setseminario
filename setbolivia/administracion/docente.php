@@ -160,7 +160,7 @@ include 'header.php';
 
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Ciudad(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Ciudad..."   name="departamento" id="departamento" required>
+                            <select class="form-control" data-placeholder="Seleccione Ciudad..."   name="departamento" id="departamento" required>
 
                             </select>
                           </div>

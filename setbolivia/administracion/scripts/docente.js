@@ -201,7 +201,7 @@ function mostrar(id_doc) {
         $("#telefono").val(data.telefono);
         $("#celular").val(data.celular);
         $('#imagenmuestra').show();
-        $("#imagenmuestra").attr("src", "../files/alumnos/" + data.imagen);
+        $("#imagenmuestra").attr("src", "../files/docentes/" + data.imagen);
         $('#imagenactual').val(data.imagen);
         $("#fech_nac").val(data.fech_nac);
         $("#sexo").val(data.sexo);
@@ -210,7 +210,7 @@ function mostrar(id_doc) {
         $("#email").val(data.email);
 
 
-        $("#ciudad").val(data.departamento).trigger("chosen:updated");
+        $("#departamento").val(data.departamento).trigger("chosen:updated");
         $.post("../ajax/docente.php?op=Provincia ", { id: data.departamento }, function(r) {
 
 

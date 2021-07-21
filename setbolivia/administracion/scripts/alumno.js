@@ -2,6 +2,7 @@ var tabla;
 
 //Función que se ejecuta al inicio
 function init() {
+
     mostrarform(false);
     listar();
 
@@ -127,27 +128,31 @@ $('#imagenmuestra').hide();
 
 //Función limpiar
 function limpiar() {
+  alert("limpiando");
     $("#nombre").val("");
     $("#apellido").val("");
     $("#telefono").val("");
     $("#celular").val("");
-    $("#imagen").val("");
+    //$("#imagen").val("");
+    $("#imagenmuestra").hide();
+  	$("#imagenactual").hide();
     $("#estado_civil").val("");
     $("#email").val("");
     $("#direccion").val("");
     $("#fech_nac").val("");
-    $("#napais").val("");
+    $("#c_i").val("");
+    $("#napais").val('').trigger("chosen:updated");
     $("#naciudad").val("");
     $("#naprovincia").val("");
-    $("#c_i").val("");
-    $("#region").val("");
+
+   // $("#region").val("");
     $("#ciudad").val("");
     $("#provincia").val("");
     $("#distrito").val("");
-    $("#miembro").val("");
-    $("#fecha").val("");
-    $("#estado").val("");
-    $("#act_sem").val("");
+  //  $("#miembro").val("");
+  //  $("#fecha").val("");
+   // $("#estado").val("");
+  //  $("#act_sem").val("");
 
 }
 
@@ -155,6 +160,7 @@ function limpiar() {
 function mostrarform(flag) {
     limpiar();
     if (flag) {
+      limpiar();
         $("#listadoregistros").hide();
         $("#formularioregistros").show();
         $("#btnGuardar").prop("disabled", false);
@@ -174,6 +180,7 @@ function cancelarform() {
 
 //Función Listar
 function listar() {
+
     tabla = $('#tbllistado').dataTable({
         "aProcessing": true, //Activamos el procesamiento del datatables
         "aServerSide": true, //Paginación y filtrado realizados por el servidor
@@ -228,10 +235,11 @@ function guardaryeditar(e) {
 
 function mostrar(id_alm) {
 
+
     $.post("../ajax/alumno.php?op=mostrar", { id_alm: id_alm }, function(data, status) {
 
         data = JSON.parse(data);
-       // alert(data.napais);
+       //alert(data.napais);
         mostrarform(true);
 
         var  dato = 29;
@@ -329,6 +337,7 @@ function mostrar(id_alm) {
     });
 
     })
+    limpiar();
 }
 
 //Función para desactivar registros
