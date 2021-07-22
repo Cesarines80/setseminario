@@ -90,18 +90,20 @@ function limpiar() {
     $("#apellido").val("");
     $("#telefono").val("");
     $("#celular").val("");
-    $("#imagen").val("");
+    $("#imagenmuestra").attr("src","");
+	  $("#imagenactual").val("");
 
     $("#email").val("");
 
     $("#fech_nac").val("");
-    $("#departamento").val("");
+
 
     $("#ci").val("");
     $("#sexo").val("");
-
-    $("#provincia").val("");
-    $("#distrito").val("");
+    $("#especialidad").val('').trigger("chosen:updated");
+    $("#departamento").val('').trigger("chosen:updated");
+    $("#provincia").val('').trigger("chosen:updated");
+    $("#distrito").val('').trigger("chosen:updated");
 
 
 }

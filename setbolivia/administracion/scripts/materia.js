@@ -82,9 +82,11 @@ function init() {
 //Función limpiar
 function limpiar() {
     $("#id").val("");
-    $("#semestre").val("");
-    $("#fechainicio").val("");
-    $("#fechafinal").val("");
+    $("#grado").val('').trigger("chosen:updated");
+    $("#id_materia").val('').trigger("chosen:updated");
+    $("#id_doce").val('').trigger("chosen:updated");
+    $("#fecha").val("");
+    $("#semestre").val('').trigger("chosen:updated");
 
 }
 

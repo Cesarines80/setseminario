@@ -89,7 +89,7 @@ switch ($_GET["op"]) {
         case 'grado':
 
           $rspta = $materia->listartodo("grado_academico");
-
+          echo  '<option value=""></option>';
           while ($reg = $rspta->fetch_object()) {
             echo '<option value='.$reg->id_grado.'>'.$reg->nivel.'</option>';
           }
@@ -97,13 +97,13 @@ switch ($_GET["op"]) {
         case 'materias':
 
           $rspta = $materia->listarmaterias($id_grado);
-
+          echo  '<option value=""></option>';
           while ($reg = $rspta->fetch_object()) {
             echo '<option value='.$reg->id_mat.'>'.$reg->descripcion.'</option>';
           }
         break;
         case 'docente':
-
+          echo  '<option value=""></option>';
           $rspta = $materia->docenteciudad($de);
 
           while ($reg = $rspta->fetch_object()) {
@@ -111,7 +111,7 @@ switch ($_GET["op"]) {
           }
         break;
         case 'semestre':
-
+          echo  '<option value=""></option>';
           $rspta = $materia->semestreciudad($de);
 
           while ($reg = $rspta->fetch_object()) {

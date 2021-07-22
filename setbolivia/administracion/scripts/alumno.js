@@ -128,27 +128,27 @@ $('#imagenmuestra').hide();
 
 //Función limpiar
 function limpiar() {
-  alert("limpiando");
+  //alert("limpiando");
     $("#nombre").val("");
     $("#apellido").val("");
     $("#telefono").val("");
     $("#celular").val("");
     //$("#imagen").val("");
-    $("#imagenmuestra").hide();
-  	$("#imagenactual").hide();
+    $("#imagenmuestra").attr("src","");
+	  $("#imagenactual").val("");
     $("#estado_civil").val("");
     $("#email").val("");
     $("#direccion").val("");
     $("#fech_nac").val("");
     $("#c_i").val("");
     $("#napais").val('').trigger("chosen:updated");
-    $("#naciudad").val("");
-    $("#naprovincia").val("");
+    $("#naciudad").val('').trigger("chosen:updated");
+    $("#naprovincia").val('').trigger("chosen:updated");
 
    // $("#region").val("");
-    $("#ciudad").val("");
-    $("#provincia").val("");
-    $("#distrito").val("");
+    $("#ciudad").val('').trigger("chosen:updated");
+    $("#provincia").val('').trigger("chosen:updated");
+    $("#distrito").val('').trigger("chosen:updated");
   //  $("#miembro").val("");
   //  $("#fecha").val("");
    // $("#estado").val("");

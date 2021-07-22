@@ -148,7 +148,7 @@ include 'header.php';
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <label>Categoria(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione Materia..."   name="especialidad" id="especialidad" required>
+                            <select class="chosen-select" data-placeholder="Seleccione Categoria..."   name="especialidad" id="especialidad" required>
 
                             </select>
                           </div>

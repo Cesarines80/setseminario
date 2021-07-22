@@ -124,7 +124,7 @@ include 'header.php';
                         <div class="form-row">
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <label>Trimestre(*):</label>
-                                <select data-placeholder="Seleccion Docente..." class="form-control"  name="semestre" id="semestre" required>
+                                <select data-placeholder="Seleccion Trimestre..." class="form-control"  name="semestre" id="semestre" required>
                                     <option>Elija el Trimestre</option>
 
                                 </select>
