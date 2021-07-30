@@ -77,6 +77,7 @@ switch ($_GET["op"]) {
           while ($reg = $rspta->fetch_object()) {
             echo '<option value='.$reg->id_aper.'>'.$reg->descripcion.'</option>';
           }
+          // unset($_SESSION['cart']);
         break;
 
     case 'listar':
@@ -117,8 +118,8 @@ switch ($_GET["op"]) {
     case 'listarNotas':
           require_once "../modelos/Notas.php";
           $notas=new Notas();
-            $ides = 104;
-          $rspta=$notas->listarActivos($de,$ide);
+
+          $rspta=$notas->listarActivos($de,$ide); // $de = ciudad, $ide = numero de registro
            //Vamos a declarar un array
            $data= Array();
 
