@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 require_once('../conexion/conexion.php');
 //
 //var_dump($_SESSION);
