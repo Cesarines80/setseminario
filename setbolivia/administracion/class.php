@@ -4,7 +4,7 @@ require_once('../conexion/conexion.php');
 //
 //var_dump($_SESSION);
 
-
+///
 class Consultas
 {
 
