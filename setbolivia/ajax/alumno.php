@@ -46,7 +46,7 @@ switch ($_GET["op"]) {
     }
         if (empty($id_alm)) {
             $rspta = $alumno->insertar($nombre, $apellido, $telefono, $celular, $imagen, $estado_civil, $email, $direccion, $fech_nac, $napais, $naciudad, $naprovincia, $c_i, $ciudad, $provincia, $distrito, $miembro, $fecha, '1', $act_sem);
-
+          
             echo $rspta? "Alumno registrado":"Alumno no se pudo registrar";
         }else {
           $rspta = $alumno->editar($id_alm, $nombre, $apellido, $telefono, $celular, $imagen, $estado_civil, $email, $direccion, $fech_nac, $napais, $naciudad, $naprovincia, $c_i,  $ciudad, $provincia, $distrito, $miembro, $fecha, '1', $act_sem);
