@@ -217,7 +217,7 @@ function guardaryeditar(e) {
         url: "../ajax/alumno.php?op=guardaryeditar",
         type: "POST",
         beforeSend: function() {
-
+          
         },
         data: formData,
         contentType: false,

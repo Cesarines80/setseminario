@@ -109,7 +109,7 @@ include 'header.php';
                         </div>
 
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label for="inputPassword" class=" control-label">Estado Civil(*)</label>
+                            <label for="inputPassword" class=" control-label">Estado Civil</label>
 
                             <div class="" >
                               Soltero <input type="radio"  name="estado_civil" id="estado_civil"  value="SOLTERO" >
@@ -125,13 +125,13 @@ include 'header.php';
                             <input type="email" class="form-control" name="email" id="email" maxlength="50" placeholder="Email" >
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Direccion(*):</label>
+                            <label>Direccion:</label>
                             <input type="text" class="form-control" name="direccion" id="direccion" maxlength="50" placeholder="Direccion" >
                           </div>
                       </div>
                       <div class="form-row">
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <label>Fecha Nacimiento(*):</label>
+                            <label>Fecha Nacimiento:</label>
                             <input type="date" class="form-control" name="fech_nac" id="fech_nac" maxlength="50" placeholder="Email" >
                             </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -145,21 +145,21 @@ include 'header.php';
                       <div class="form-row">
 
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <label> Pais(*):</label>
-                            <select class="chosen-select" data-placeholder="Seleccione el Pais..."  name="napais" id="napais" required>
+                            <label> Pais:</label>
+                            <select class="chosen-select" data-placeholder="Seleccione el Pais..."  name="napais" id="napais" >
                                 <option>Elija su Pais</option>
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <label>Departamento(*):</label>
-                            <select class="form-control" data-placeholder="Seleccione Departamento..."  name="naciudad" id="naciudad"  required>
+                            <label>Departamento:</label>
+                            <select class="form-control" data-placeholder="Seleccione Departamento..."  name="naciudad" id="naciudad"  >
 
                             </select>
                           </div>
                           <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <label>Provincia(*):</label>
-                            <select class="form-control" data-placeholder="Seleccione Provincia..."   name="naprovincia" id="naprovincia" required>
+                            <label>Provincia:</label>
+                            <select class="form-control" data-placeholder="Seleccione Provincia..."   name="naprovincia" id="naprovincia" >
 
                             </select>
                           </div>

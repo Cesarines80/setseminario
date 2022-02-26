@@ -14,17 +14,33 @@ $id_alm = isset($_POST["id_alm"])?limpiarCadena($_POST["id_alm"]):"";
 $nombre = isset($_POST["nombre"])?limpiarCadena($_POST["nombre"]):"";
 $apellido = isset($_POST["apellido"])?limpiarCadena($_POST["apellido"]):"";
 $telefono = isset($_POST["telefono"])?limpiarCadena($_POST["telefono"]):"";
+if (empty($telefono)) 
+	{
+    	$telefono = 0; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
+	
 $celular = isset($_POST["celular"])?limpiarCadena($_POST["celular"]):"";
+if (empty($celular)) 
+	{
+    	$celular = 0; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $imagen = isset($_POST["imagen"])?limpiarCadena($_POST["imagen"]):"";
 $estado_civil = isset($_POST["estado_civil"])?limpiarCadena($_POST["estado_civil"]):"";
 $email = isset($_POST["email"])?limpiarCadena($_POST["email"]):"";
 $direccion = isset($_POST["direccion"])?limpiarCadena($_POST["direccion"]):"";
 $fech_nac = isset($_POST["fech_nac"])?limpiarCadena($_POST["fech_nac"]):"";
+if (empty($fech_nac)) 
+	{
+    	$fech_nac = '2022-2-20'; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $napais = isset($_POST["napais"])?limpiarCadena($_POST["napais"]):"";
 $naciudad = isset($_POST["naciudad"])?limpiarCadena($_POST["naciudad"]):"";
 $naprovincia = isset($_POST["naprovincia"])?limpiarCadena($_POST["naprovincia"]):"";
 $c_i = isset($_POST["c_i"])?limpiarCadena($_POST["c_i"]):"";
-
+if (empty($c_i)) 
+	{
+    	$c_i = ''; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $ciudad = isset($_POST["ciudad"])?limpiarCadena($_POST["ciudad"]):"";
 $provincia = isset($_POST["provincia"])?limpiarCadena($_POST["provincia"]):"";
 $distrito = isset($_POST["distrito"])?limpiarCadena($_POST["distrito"]):"";
