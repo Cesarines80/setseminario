@@ -37,7 +37,8 @@ switch ($_GET["op"]) {
                     "0"=>$reg->nombre,
                     "1"=>$reg->apellido,
                     "2"=>$reg->materia,
-                    "3"=>$reg->grado
+                    "3"=>$reg->grado,
+                    "4"=>$reg->semestre
 
 
 

@@ -70,8 +70,6 @@ include 'header.php';
                             <th>Apellido</th>
                             <th>Materia</th>
                             <th>Grado</th>
-                            <th>Semestre</th>
-
 
                           </thead>
                           <tbody>
@@ -81,7 +79,6 @@ include 'header.php';
                             <th>Apellido</th>
                             <th>Materia</th>
                             <th>Grado</th>
-                            <th>Semestre</th>
                           </tfoot>
                         </table>
                     </div>
