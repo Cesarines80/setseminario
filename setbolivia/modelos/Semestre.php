@@ -49,7 +49,7 @@ class Semestre
     public function listar($id)
     {
 
-        $sql = "SELECT * FROM apersemestre  where id_depto = $id";
+        $sql = "SELECT * FROM apersemestre  where id_depto = $id and activo=1";
         return ejecutarConsulta($sql);
     }
     public function listartodo($tabla)

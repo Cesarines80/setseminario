@@ -62,7 +62,7 @@ class Materia
       INNER JOIN apersemestre ON apersemestre.id = apermateria.semestre
       INNER JOIN materias ON materias.id_mat= apermateria.id_materia
       INNER JOIN grado_academico ON grado_academico.id_grado = materias.id_grado
-      where apermateria.id_depto = $id";
+      where apermateria.id_depto = $id and apersemestre.activo = 1";
         return ejecutarConsulta($sql);
     }
     public function listartodo($tabla)
