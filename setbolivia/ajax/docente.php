@@ -15,9 +15,21 @@ $id_doc = isset($_POST["id_doc"])?limpiarCadena($_POST["id_doc"]):"";
 $nombre = isset($_POST["nombre"])?limpiarCadena($_POST["nombre"]):"";
 $apellido = isset($_POST["apellido"])?limpiarCadena($_POST["apellido"]):"";
 $telefono = isset($_POST["telefono"])?limpiarCadena($_POST["telefono"]):"";
+if (empty($telefono)) 
+	{
+    	$telefono = 0; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $celular = isset($_POST["celular"])?limpiarCadena($_POST["celular"]):"";
+if (empty($celular)) 
+	{
+    	$celular = 0; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $imagen = isset($_POST["imagen"])?limpiarCadena($_POST["imagen"]):"";
 $fech_nac = isset($_POST["fech_nac"])?limpiarCadena($_POST["fech_nac"]):"";
+if (empty($fech_nac)) 
+	{
+    	$fech_nac = '2022-2-20'; //echo 'La variable SÍ está vacía, su contenido es: '. $var;
+	}
 $sexo = isset($_POST["sexo"])?limpiarCadena($_POST["sexo"]):"";
 $ci = isset($_POST["ci"])?limpiarCadena($_POST["ci"]):"";
 $email = isset($_POST["email"])?limpiarCadena($_POST["email"]):"";

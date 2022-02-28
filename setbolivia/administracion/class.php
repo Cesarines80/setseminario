@@ -26,6 +26,7 @@ class Consultas
 	private $promedio;
 	private $sem;
 	private $db;
+  private $usuario1;
 
         public function __construc()
           {
@@ -47,6 +48,7 @@ class Consultas
             $this->semestre = array();
             $this->promedio = array();
             $this->sem = array();
+            $this->usuario1=array();
           }
 
     public function get_alum($id)
@@ -161,17 +163,17 @@ class Consultas
 
   public function get_usuario($n)
 	{
-      $this->docente=array();
+      $this->usuario1=array();
       $con = new conexion();
       $mysqli = $con->conexion();
 
 		$sql1 = "select * from usuario where usu_id= '$n' ";
 		$res1 = $mysqli->query($sql1);
 		while ($reg1 = $res1->fetch_assoc()) {
-			$this->docente[] = $reg1;
+			$this->usuario1[] = $reg1;
 		}
 
-		return $this->docente;
+		return $this->usuario1;
 	}
 //////////////CALCULAR PROMEDIO/////////////////////////
   public function promedio($d)

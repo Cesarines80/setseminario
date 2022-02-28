@@ -11,7 +11,7 @@ $obj = new Consultas();
 $usuario = $obj->get_usuario($_SESSION['id']);
 //$materias = $obj-> get_num_mat($_SESSION['id']);
 
-//var_dump($_SESSION); exit;
+//var_dump($usuario); exit;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,7 +70,7 @@ include 'header.php';
                             <th>Trimestre</th>
                             <th>Inicio</th>
                             <th>Final</th>
-                            <th>Cerrar</th>
+
                             <th>Estado</th>
                           </thead>
                           <tbody>
@@ -80,7 +80,7 @@ include 'header.php';
                             <th>Trimestre</th>
                             <th>Inicio</th>
                             <th>Final</th>
-                            <th>Cerrar</th>
+
                             <th>Estado</th>
                           </tfoot>
                         </table>

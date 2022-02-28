@@ -10,8 +10,8 @@ $d = $_SESSION['id'];
 $usuciu = $sem->usuci("usuario", $d);
 $reg = $usuciu->fetch_object();
 $de=$reg->ciudad;
-
-
+//var_dump($de); exit;
+//$de = 1;
 $id = isset($_POST["id"])?limpiarCadena($_POST["id"]):"";
 //var_dump($id_alm);
 $semestre = isset($_POST["semestre"])?limpiarCadena($_POST["semestre"]):"";
@@ -56,7 +56,7 @@ switch ($_GET["op"]) {
 
 
             $rspta = $sem->listar($de);
-
+           // var_dump($rspta); exit;
             //Vamos a declarar un array
             $data = array();
             while ($reg = $rspta->fetch_object()) {
@@ -68,8 +68,8 @@ switch ($_GET["op"]) {
                     "1"=>$reg->semestre,
                     "2"=>$reg->fechainicio,
                     "3"=>$reg->fechafinal,
-                    "4"=>'<buton class="btn btn-primary" onclick="printr('.$reg->id_alm.')" ><i class="fa fa-closed-captioning" ></i></buton>',
-                    "5"=>($reg->activo)?'<span class="label bg-success">Activada</span>':
+
+                    "4"=>($reg->activo)?'<span class="label bg-success">Activada</span>':
                     '<span class="label bg-red">Desactivada</span>'
 
                 );

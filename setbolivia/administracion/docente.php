@@ -107,7 +107,7 @@ include 'header.php';
                           </div>
                           <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Celular(*):</label>
-                            <input type="text" class="form-control" name="celular" id="celular" maxlength="50" placeholder="Celular" required>
+                            <input type="text" class="form-control" name="celular" id="celular" maxlength="50" placeholder="Celular">
                           </div>
                         </div>
                       <div class="form-row">
@@ -120,7 +120,7 @@ include 'header.php';
 
                         <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
                             <label>Fecha Nacimiento(*):</label>
-                            <input type="date" class="form-control" name="fech_nac" id="fech_nac" maxlength="50" placeholder="Email" required>
+                            <input type="date" class="form-control" name="fech_nac" id="fech_nac" maxlength="50" placeholder="Email" >
                             </div>
                       </div>
 
