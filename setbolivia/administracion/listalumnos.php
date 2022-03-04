@@ -6,7 +6,7 @@ if(!isset($_SESSION['id'])){
 
 require_once('class.php');
 require_once('../config/conexion.php');
-require_once('../modelos/Alumno.php');
+require_once('../modelos/listalumnos.php');
 $obj = new Consultas();
 $usuario = $obj->get_usuario($_SESSION['id']);
 //$materias = $obj-> get_num_mat($_SESSION['id']);
@@ -40,7 +40,7 @@ include 'header.php';
                     <div class="container-fluid">
                         <div class="row mb-2">
                             <div class="col-sm-6">
-                                <h1 class="m-0">TRIMESTRES</h1>
+                                <h1 class="m-0">ACTIVOS</h1>
                             </div>
 
                         </div>
@@ -57,7 +57,7 @@ include 'header.php';
               <div class="col-md-12">
                   <div class="box">
                     <div class="box-header with-border">
-                          <h1 class="box-title">Lista de Docentes</h1>
+                          <h1 class="box-title">Lista de Alumnos</h1>
                         <div class="box-tools pull-right">
                         </div>
                     </div>
@@ -66,19 +66,19 @@ include 'header.php';
                     <div class="panel-body table-responsive" id="listadoregistros">
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                           <thead>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Alumno</th>
                             <th>Materia</th>
-                            <th>Grado</th>
+                            <th>Docente</th>
+                            <th>Semestre</th>
 
                           </thead>
                           <tbody>
                           </tbody>
                           <tfoot>
-                          <th>Nombre</th>
-                            <th>Apellido</th>
+                          <th>Alumno</th>
                             <th>Materia</th>
-                            <th>Grado</th>
+                            <th>Docente</th>
+                            <th>Semestre</th>
                           </tfoot>
                         </table>
                     </div>
@@ -103,7 +103,7 @@ include 'header.php';
             <?php
             include'footer.php';
             ?>
-            <script type="text/javascript" src="scripts/listdocentes.js"></script>
+            <script type="text/javascript" src="scripts/listalumnos.js"></script>
 
     </div>
 
