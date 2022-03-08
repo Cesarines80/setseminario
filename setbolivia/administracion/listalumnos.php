@@ -6,7 +6,7 @@ if(!isset($_SESSION['id'])){
 
 require_once('class.php');
 require_once('../config/conexion.php');
-require_once('../modelos/listalumnos.php');
+//require_once('../modelos/listalumnos.php');
 $obj = new Consultas();
 $usuario = $obj->get_usuario($_SESSION['id']);
 //$materias = $obj-> get_num_mat($_SESSION['id']);
