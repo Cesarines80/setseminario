@@ -85,7 +85,7 @@ switch ($_GET["op"]) {
 
 
             $rspta = $registro->listar($de);
-
+              //var_dump($rspta); exit;
             //Vamos a declarar un array
             $data = array();
             while ($reg = $rspta->fetch_object()) {

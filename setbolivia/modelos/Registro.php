@@ -76,15 +76,15 @@ class Registro
 
     public function mostrar($id)
     {
-       $sql = "SELECT * FROM registro WHERE id_reg = '$id'";
+      $sql = "SELECT * FROM registro WHERE id_reg = '$id'";
         return ejecutarConsultaSimpleFila($sql);
     }
 
     public function listar($id)
     {
 
-        $sql = "SELECT registro.id_reg as id_reg, alumnos.nombre, alumnos.apellido,
-         registro.fecha , apersemestre.semestre as semestre, registro.activo  FROM registro
+        $sql = "SELECT registro.id_reg as id_reg, alumnos.nombre as nombre , alumnos.apellido as apellido,
+         registro.fecha as fecha, apersemestre.semestre as semestre, registro.activo as activo  FROM registro
         INNER JOIN alumnos ON alumnos.id_alm = registro.id_alm
         INNER JOIN apersemestre ON apersemestre.id = registro.id_grupo
        where registro.id_ciudad  = $id and registro.activo = 1";
