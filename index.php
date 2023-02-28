@@ -69,7 +69,7 @@
 				<!--======================================== Articulo 1 ========================================-->
 				<article class="col-xs-12 col-sm-6 col-md-4">
 					<div class="thumbnail">
-				      <img src="assets/gallery/1-2021.jpeg" alt="IMG" class="img-responsive img-rounded">
+				     <!--- <img src="assets/gallery/1-2021.jpeg" alt="IMG" class="img-responsive img-rounded"> -->
 				      <div class="caption">
 				        <h3 class="text-center">Inscripciones Abiertas</h3>
 				        <p class="text-justify">Iniciamos esta gestion con nuevo trimestre participa no te quedes sin ser parte de este reto.</p>
@@ -80,7 +80,7 @@
 				<!--======================================== Articulo 2 ========================================-->
 				<article class="col-xs-12 col-sm-6 col-md-4">
 					<div class="thumbnail">
-				      <img src="assets/gallery/1-docentes.jpeg" alt="IMG" class="img-responsive img-rounded">
+				     <!---   <img src="assets/gallery/1-docentes.jpeg" alt="IMG" class="img-responsive img-rounded"> -->
 				      <div class="caption">
 				        <h3 class="text-center">Docentes de la Materia</h3>
 				        <p class="text-justify">Docentes con amplia experiencia en las materias a desarrollarse.</p>
@@ -91,7 +91,7 @@
 				<!--======================================== Articulo 3 ========================================-->
 				<article class="col-xs-12 col-sm-6 col-md-4">
 					<div class="thumbnail">
-				      <img src="assets/gallery/default.png" alt="IMG" class="img-responsive img-rounded">
+				    <!---    <img src="assets/gallery/default.png" alt="IMG" class="img-responsive img-rounded"> -->
 				      <!----- <div class="caption">
 				        <h3 class="text-center">Lorem ipsum dolor sit amet</h3>
 				        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis quam, incidunt, sapiente id quibusdam voluptatem.</p>

@@ -19,7 +19,7 @@
 						</ul>
 					</div>
 					<div class="col-xs-12">
-						<div class="full-reset footer-copyright"><i class="fa fa-copyright"></i> 2021 S.e.t Bolivia</div>
+						<div class="full-reset footer-copyright"><i class="fa fa-copyright"></i> 2023 - 2025 S.E.T Bolivia</div>
 					</div>
 				</div>
 			</div>
