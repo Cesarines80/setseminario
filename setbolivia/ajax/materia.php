@@ -88,7 +88,7 @@ switch ($_GET["op"]) {
 
         case 'grado':
 
-          $rspta = $materia->listartodo("grado_academico");
+          $rspta = $materia->listargrado("grado_academico");
           echo  '<option value=""></option>';
           while ($reg = $rspta->fetch_object()) {
             echo '<option value='.$reg->id_grado.'>'.$reg->nivel.'</option>';

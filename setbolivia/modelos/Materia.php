@@ -70,9 +70,14 @@ class Materia
         $sql = "SELECT * FROM $tabla";
         return ejecutarConsulta($sql);
     }
+    public function listargrado($tabla)
+    {
+        $sql = "SELECT * FROM $tabla where   activo = 1 ";
+        return ejecutarConsulta($sql);
+    }
     public function listarmaterias($id)
     {
-        $sql = "SELECT * FROM materias where id_grado = $id  ";
+        $sql = "SELECT * FROM materias where id_grado = $id and estado = 1 ";
         return ejecutarConsulta($sql);
     }
 
