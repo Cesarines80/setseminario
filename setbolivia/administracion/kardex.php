@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['id'])){
   header("location: ../index.php");
 }
-//require_once('../conexion/conexion.php');
+require_once('../conexion/conexion.php');
 require_once('class.php');
 $id_alm = $_GET['id_alm'];
 $obj = new Consultas();
