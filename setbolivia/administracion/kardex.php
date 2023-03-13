@@ -8,10 +8,11 @@ require_once('class.php');
 $id_alm = $_GET['id_alm'];
 $obj = new Consultas();
 $alumno = $obj->get_alum($id_alm);
+$usuario = $obj->get_usuario($_SESSION['id']);
 
- $materia = $obj->get_materia(0, 20);
- $tecnico = $obj->get_materia(25, 14);
- $fundamental = $obj->get_materia(20, 5);
+ $materia = $obj->get_materia(1);
+ $tecnico = $obj->get_materia(2);
+ $fundamental = $obj->get_materia(3);
 
 ?>
 <!DOCTYPE html>
@@ -112,9 +113,22 @@ $alumno = $obj->get_alum($id_alm);
                                       <td><?php echo $materia[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                       $notas = $obj->get_notas($id_alm, $materia[$i]['id_mat']);
-                                            echo $notas[0]['nota'];
-                                            //var_dump($notas);
+                                      $notas = array();
+                                      $notas = $obj->get_notas($id_alm, $materia[$i]['id_mat']);
+                                      //echo gettype($notas);
+                                      if(is_array($notas[0]['nota'])){
+                                        echo "es nulo";
+
+                                       // echo $notas
+
+                                      }else{
+                                       // echo $notas[0]['nota'];
+                                       // var_dump($notas);
+                                      }
+
+                                           // echo $notas[0]['nota'];
+
+
                                          ?>
                                       </td>
                                     </tr>
@@ -132,7 +146,7 @@ $alumno = $obj->get_alum($id_alm);
               <!-- /.card-body -->
             </div>
             <div class="card-body">
-              <strong ><i class="fas fa-book mr-1"></i>TECNICO SUPERIOR EN TEOLOGIA</strong>
+              <strong ><i class="fas fa-book mr-1"></i>MENSION EN TEOLOGIA BIBLICA</strong>
               <table class="table table-striped">
                                   <thead>
                                     <tr>
@@ -157,9 +171,9 @@ $alumno = $obj->get_alum($id_alm);
                                       <td><?php echo $tecnico[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                       $notas = $obj->get_notas($id_alm, $tecnico[$i]['id_mat']);
+                                     /*  $notas = $obj->get_notas($id_alm, $tecnico[$i]['id_mat']);
                                             echo $notas[0]['nota'];
-                                            //var_dump($notas);
+                                            //var_dump($notas);*/
                                          ?>
                                       </td>
                                     </tr>
@@ -177,7 +191,7 @@ $alumno = $obj->get_alum($id_alm);
               <!-- /.card-body -->
             </div>
             <div class="card-body">
-              <strong ><i class="fas fa-book mr-1"></i>CURSO FUNDAMENTAL</strong>
+              <strong ><i class="fas fa-book mr-1"></i>LICENCIATURA EN TEOLOGIA</strong>
               <table class="table table-striped">
                                   <thead>
                                     <tr>
@@ -202,9 +216,9 @@ $alumno = $obj->get_alum($id_alm);
                                       <td><?php echo $fundamental[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                       $notas = $obj->get_notas($id_alm, $fundamental[$i]['id_mat']);
+                                      /* $notas = $obj->get_notas($id_alm, $fundamental[$i]['id_mat']);
                                             echo $notas[0]['nota'];
-                                            //var_dump($notas);
+                                            //var_dump($notas);*/
                                          ?>
                                       </td>
                                     </tr>

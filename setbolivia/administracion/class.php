@@ -63,14 +63,14 @@ class Consultas
       return $this->alumno;
     }
 
-    public function get_materia($i, $j)
+    public function get_materia($i)
     {
       $this->mat=array();
       //require_once('../conexion/conexion.php');
       $con = new conexion();
       $mysqli = $con->conexion();
 
-       $query = "SELECT * FROM materias WHERE estado ='1'  LIMIT $i, $j ";
+       $query = "SELECT * FROM materias WHERE estado ='1' and id_grado = $i ";
       $resultados = $mysqli->query($query);
      // $rows = $resultados->fetch_assoc();
       while($fila = $resultados->fetch_assoc())
@@ -92,12 +92,15 @@ class Consultas
        $sql = "SELECT * from notas_historial where id_alm='$id' and id_mat='$id_mat'";
 
       $res= $mysqli->query($sql);
+
       //$reg = mysql_fetch_array($res);
       $row = $res->fetch_assoc();
+
       $this->notas[]=$row;
 
       return $this->notas;
         //echo $row['nota'];
+
 
 
     }
