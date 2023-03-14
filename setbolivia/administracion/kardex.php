@@ -113,18 +113,22 @@ $usuario = $obj->get_usuario($_SESSION['id']);
                                       <td><?php echo $materia[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                      $notas = array();
+                                      //$notas = array();
+                                    //  $notas = false;
                                       $notas = $obj->get_notas($id_alm, $materia[$i]['id_mat']);
                                       //echo gettype($notas);
-                                      if(is_array($notas[0]['nota'])){
-                                        echo "es nulo";
+                                     // if (!$notas->count()){
+                                     //
 
+                                     if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                       //echo "funciona";
+                                       echo $notas[0]['nota'];
+                                     }
                                        // echo $notas
+                                     // }
 
-                                      }else{
-                                       // echo $notas[0]['nota'];
-                                       // var_dump($notas);
-                                      }
+
 
                                            // echo $notas[0]['nota'];
 
@@ -171,9 +175,14 @@ $usuario = $obj->get_usuario($_SESSION['id']);
                                       <td><?php echo $tecnico[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                     /*  $notas = $obj->get_notas($id_alm, $tecnico[$i]['id_mat']);
-                                            echo $notas[0]['nota'];
-                                            //var_dump($notas);*/
+                                       $notas = $obj->get_notas($id_alm, $tecnico[$i]['id_mat']);
+                                           // echo $notas[0]['nota'];
+                                            //var_dump($notas);
+                                            if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                              //echo "funciona";
+                                              echo $notas[0]['nota'];
+                                            }
                                          ?>
                                       </td>
                                     </tr>
@@ -216,9 +225,14 @@ $usuario = $obj->get_usuario($_SESSION['id']);
                                       <td><?php echo $fundamental[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                      /* $notas = $obj->get_notas($id_alm, $fundamental[$i]['id_mat']);
-                                            echo $notas[0]['nota'];
+                                       $notas = $obj->get_notas($id_alm, $fundamental[$i]['id_mat']);
+                                            //echo $notas[0]['nota'];
                                             //var_dump($notas);*/
+                                            if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                              //echo "funciona";
+                                              echo $notas[0]['nota'];
+                                            }
                                          ?>
                                       </td>
                                     </tr>

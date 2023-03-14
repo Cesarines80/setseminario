@@ -96,10 +96,13 @@ class Consultas
       //$reg = mysql_fetch_array($res);
       $row = $res->fetch_assoc();
 
+
+
       $this->notas[]=$row;
 
       return $this->notas;
         //echo $row['nota'];
+
 
 
 
