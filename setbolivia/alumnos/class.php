@@ -61,7 +61,7 @@ class Consultas
       return $this->alumno;
     }
 
-    public function get_materia($i, $j)
+    public function get_materia23($i, $j)
     {
       $this->mat=array();
       //require_once('../conexion/conexion.php');
@@ -82,6 +82,28 @@ class Consultas
 
 
     }
+    public function get_materia($i)
+    {
+      $this->mat=array();
+      //require_once('../conexion/conexion.php');
+      $con = new conexion();
+      $mysqli = $con->conexion();
+
+       $query = "SELECT * FROM materias WHERE estado ='1' and id_grado = $i ";
+      $resultados = $mysqli->query($query);
+     // $rows = $resultados->fetch_assoc();
+      while($fila = $resultados->fetch_assoc())
+      {
+          $this->mat[]=$fila;
+      }
+      return $this->mat;
+      $resultados -> free_result();
+
+      $mysqli -> close();
+
+
+    }
+
 
     public function get_notas($id, $id_mat){
       $this->notas=array();

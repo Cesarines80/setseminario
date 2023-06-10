@@ -80,6 +80,7 @@ class PDF extends FPDF
 			$this->Cell(100,10,'DIPLOMA MINISTERIAL',0,0,'C');
 
 				$this->Ln();
+
 		}
 
 
@@ -94,12 +95,11 @@ class PDF extends FPDF
 		}
 
 		 function FancyTable()
-
 		{
 			// Colores, ancho de línea y fuente en negrita
 			$this->SetFillColor(3,10,73);
 			$this->SetTextColor(255);
-			$this->SetDrawColor(246,246,249);
+			$this->SetDrawColor(100,100,100);
 			$this->SetLineWidth(.3);
 			$this->SetFont('Arial','B',7);
 			$this->Cell(10,7,'N',1,0,'C',true);
@@ -108,46 +108,43 @@ class PDF extends FPDF
 			$this->Cell(20,7,'Credito',1,0,'C',true);
 			$this->Cell(50,7,'Docente',1,0,'C',true);
 			$this->Cell(20,7,'Nota',1,0,'C',true);
-
 			$this->Ln();
 			$this->SetFillColor(224,235,255);
 			$this->SetTextColor(0);
-
-				$obj = new Consultas();
-				//$datos = $obj->get_materia11();
-        $datos = $obj->get_materia(0, 20);
-				//$datos1 = $obj->get_materia2();
-					$j=1; //$k=11;
+			$obj = new Consultas();
+				  $datos = $obj->get_materia(1);
+			   	$j=1;
 				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
-
-		 			//$notas = $obj->get_notas_historial($datos[$i]['id_mat'],$_GET['id_alm']);
-		 			$d=$datos[$i]['id_mat'];
-         //  $doc=$datos[$i]['id_doc'];
-		 			$v=$_GET['id_alm'];
-           $notas = $obj->get_notas($v, $d);
-           $not = $notas[0]['docente'];
-             // var_dump($notas);
-          // exit();
-
-           $docentes = $obj->get_docentes($not);
-        //var_dump($docentes);
-          // exit();
-
-
-							$this->SetFont('Arial','I',7);
-							$this->Cell(10,5,$j,1,0,'C',false);
-							$this->Cell(30,5,$notas[0]['fecha'],1,0,'C',false);
+		 		    $d=$datos[$i]['id_mat'];
+         		$v=$_GET['id_alm'];
+				    $notas = $obj->get_notas($v, $d);
+          $this->SetFont('Arial','I',7);
+          $this->Cell(10,5,$j,1,0,'C',false);
+        if (!empty($notas[0]['docente'])){
+                    $not = $notas[0]['docente'];
+                    $docentes = $obj->get_docentes($not);
+      				$this->Cell(30,5,$notas[0]['fecha'],1,0,'C',false);
 							$this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
 							$this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
 							$this->Cell(50,5,$docentes[0]['nombre'].' '.$docentes[0]['apellido'],1,0,'C',false);
-							$this->Cell(20,5,$notas[0]['nota'],0,'C',false);
+							$this->Cell(20,5,$notas[0]['nota'],1,1,'C',false);
 
-							$this->Ln();
 
-							$j++; //$k++;
+            } else {
+
+                $this->Cell(30,5," ",1,0,'C',false);
+                $this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
+                $this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
+                $this->Cell(50,5," ",1,0,'C',false);
+                $this->Cell(20,5," ",1,1,'C',false);
+
+             }
+               $this->Ln(0);
+
+               $j++;
 				}
-						$this->Ln();
+
 					$this->SetFont('Arial','I',14);
 					$this->Cell(40);
 					$this->Cell(100,10,'TECNICO SUPERIOR EN TEOLOGIA',0,0,'C');
@@ -155,7 +152,7 @@ class PDF extends FPDF
 						$this->Ln();
 						$this->SetFillColor(3,10,73);
 					$this->SetTextColor(255);
-					$this->SetDrawColor(246,246,249);
+					$this->SetDrawColor(100,100,100);
 					$this->SetLineWidth(.3);
 					$this->SetFont('Arial','B',7);
 					$this->Cell(10,7,'N',1,0,'C',true);
@@ -170,53 +167,50 @@ class PDF extends FPDF
 					$this->SetFillColor(224,235,255);
 					$this->SetTextColor(0);
 
-				$obj1 = new Consultas();
-				//$datos1 = $obj1->get_materiasup();
-        $datos1 = $obj1->get_materia(25, 14);
-				//$datos1 = $obj->get_materia2();
-					$j=1; //$k=11;
-				for ($i = 0; $i <sizeof($datos1) ; $i++)
+
+          $obj = new Consultas();
+				  $datos = $obj->get_materia(2);
+			   	$j=1;
+				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
+		 		    $d=$datos[$i]['id_mat'];
+         		$v=$_GET['id_alm'];
+				    $notas = $obj->get_notas($v, $d);
+          $this->SetFont('Arial','I',7);
+          $this->Cell(10,5,$j,1,0,'C',false);
+        if (!empty($notas[0]['docente'])){
+                    $not = $notas[0]['docente'];
+                    $docentes = $obj->get_docentes($not);
+      				$this->Cell(30,5,$notas[0]['fecha'],1,0,'C',false);
+							$this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
+							$this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
+							$this->Cell(50,5,$docentes[0]['nombre'].' '.$docentes[0]['apellido'],1,0,'C',false);
+							$this->Cell(20,5,$notas[0]['nota'],1,1,'C',false);
 
-		 			//$notas = $obj->get_notas_historial($datos[$i]['id_mat'],$_GET['id_alm']);
-           $d=$datos1[$i]['id_mat'];
-		 			$v=$_GET['id_alm'];
-           $notas1 = $obj1->get_notas($v, $d);
-           $not = $notas1[0]['docente'];
-           // var_dump($not);
-         //exit();
 
-         $docentes1 = $obj1->get_docentes($not);
-		                //   $sql1="select * from notas_historial where id_mat = $d and id_alm = $v ";
-		                  // $result1 = mysql_query($sql1, Conectar::con());
-		                  // $row=mysql_fetch_array($result1);
-			 			//	$p=$row['docente'];
+            } else {
 
-			 		//	$sql2="select * from docentes where id_doc = '".$row['docente']."' ";
-		                 //  $result2 = mysql_query($sql2, Conectar::con());
-		                 //  $row2=mysql_fetch_array($result2);
+                $this->Cell(30,5," ",1,0,'C',false);
+                $this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
+                $this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
+                $this->Cell(50,5," ",1,0,'C',false);
+                $this->Cell(20,5," ",1,1,'C',false);
 
-					$this->SetFont('Arial','I',7);
-					$this->Cell(10,5,$j,1,0,'C',false);
-					$this->Cell(30,5,$notas1[0]['fecha'],1,0,'C',false);
-					$this->Cell(60,5,$datos1[$i]['descripcion'],1,0,'C',false);
-					$this->Cell(20,5,$datos1[$i]['creditos'],1,0,'C',false);
-					$this->Cell(50,5,$docentes1[0]['nombre'].' '.$docentes1[0]['apellido'],1,0,'C',false);
-					$this->Cell(20,5,$notas1[0]['nota'],0,'C',false);
+             }
+               $this->Ln(0);
 
-					$this->Ln();
-
-					$j++; //$k++;
+               $j++;
 				}
-						$this->Ln();
+
+	        $this->Ln();
 					$this->SetFont('Arial','I',14);
 					$this->Cell(40);
-					$this->Cell(100,10,'CURSO FUNDAMENTAL',0,0,'C');
+					$this->Cell(100,10,'LICENCIATURA EN TEOLOGIA',0,0,'C');
 
 						$this->Ln();
 						$this->SetFillColor(3,10,73);
 					$this->SetTextColor(255);
-					$this->SetDrawColor(246,246,249);
+					$this->SetDrawColor(100,100,100);
 					$this->SetLineWidth(.3);
 					$this->SetFont('Arial','B',7);
 					$this->Cell(10,7,'N',1,0,'C',true);
@@ -231,55 +225,41 @@ class PDF extends FPDF
 					$this->SetFillColor(224,235,255);
 					$this->SetTextColor(0);
 
-				$obj3 = new Consultas();
-			//	$datos3 = $obj3->get_materia5();
-        $datos3 = $obj3->get_materia(20, 5);
-				//$datos1 = $obj->get_materia2();
-					$j=1; //$k=11;
-				for ($i = 0; $i <sizeof($datos3) ; $i++)
+          $obj = new Consultas();
+				  $datos = $obj->get_materia(3);
+			   	$j=1;
+				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
+		 		    $d=$datos[$i]['id_mat'];
+         		$v=$_GET['id_alm'];
+				    $notas = $obj->get_notas($v, $d);
+          $this->SetFont('Arial','I',7);
+          $this->Cell(10,5,$j,1,0,'C',false);
+        if (!empty($notas[0]['docente'])){
+                    $not = $notas[0]['docente'];
+                    $docentes = $obj->get_docentes($not);
+      				$this->Cell(30,5,$notas[0]['fecha'],1,0,'C',false);
+							$this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
+							$this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
+							$this->Cell(50,5,$docentes[0]['nombre'].' '.$docentes[0]['apellido'],1,0,'C',false);
+							$this->Cell(20,5,$notas[0]['nota'],1,1,'C',false);
 
-          $d=$datos3[$i]['id_mat'];
-          $v=$_GET['id_alm'];
-          $notas3 = $obj3->get_notas($v, $d);
-          $not = $notas3[0]['docente'];
-           //var_dump($notas3);
-        //exit();
 
-        $docentes3 = $obj3->get_docentes($not);
-		               //    $sql3="select * from notas_historial where id_mat = $d and id_alm = $v ";
-		                  // $result3 = mysql_query($sql3, Conectar::con());
-		                  // $row3=mysql_fetch_array($result3);
-			 		//		$p=$row3['docente'];
+            } else {
 
-			 		//	$sql2="select * from docentes where id_doc = '".$row3['docente']."' ";
-		                  // $result2 = mysql_query($sql2, Conectar::con());
-		                  // $row2=mysql_fetch_array($result2);
+                $this->Cell(30,5," ",1,0,'C',false);
+                $this->Cell(60,5,$datos[$i]['descripcion'],1,0,'C',false);
+                $this->Cell(20,5,$datos[$i]['creditos'],1,0,'C',false);
+                $this->Cell(50,5," ",1,0,'C',false);
+                $this->Cell(20,5," ",1,1,'C',false);
 
-					$this->SetFont('Arial','I',7);
-					$this->Cell(10,5,$j,1,0,'C',false);
-					$this->Cell(30,5,$notas3[0]['fecha'],1,0,'C',false);
-					$this->Cell(60,5,$datos3[$i]['descripcion'],1,0,'C',false);
-					$this->Cell(20,5,$datos3[$i]['creditos'],1,0,'C',false);
-					$this->Cell(50,5,$docentes3[0]['nombre'].' '.$docentes3[0]['apellido'],1,0,'C',false);
-					$this->Cell(20,5,$notas3[0]['nota'],0,'C',false);
+             }
+               $this->Ln(0);
 
-					$this->Ln();
-
-					$j++; //$k++;
+               $j++;
 				}
 
-					$this->Ln(50);
-					$this->SetFont('Arial','I',12);
-					$this->Cell(40);
-					$this->Cell(30,10,'-------------------------------',0,0,'C');
-					$this->Cell(150,10,'--------------------',0,0,'C');
-					$this->Ln(3);
-					$this->Cell(40);
-					$this->Cell(30,10,'DIRECTOR ACADEMICO',0,0,'C');
-					$this->Cell(150,10,'RECTOR',0,0,'C');
 
-						$this->Ln();
 
 		}
 
@@ -289,9 +269,9 @@ class PDF extends FPDF
 		{
 		    // Añadir capítulo
 		    $this->AddPage();
-			$this->cabecera();
+			  $this->cabecera();
 		    $this->Body();
-			$this->FancyTable();
+		  	$this->FancyTable();
 
 
 		}
