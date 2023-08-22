@@ -82,6 +82,7 @@ class Consultas
 
 
     }
+
     public function get_materia($i)
     {
       $this->mat=array();

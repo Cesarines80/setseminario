@@ -147,7 +147,7 @@ class PDF extends FPDF
 
 					$this->SetFont('Arial','I',14);
 					$this->Cell(40);
-					$this->Cell(100,10,'TECNICO SUPERIOR EN TEOLOGIA',0,0,'C');
+					$this->Cell(100,10,'MENSION EN TEOLOGIA BIBLICA',0,0,'C');
 
 						$this->Ln();
 						$this->SetFillColor(3,10,73);

@@ -1,16 +1,19 @@
 <?php
-session_start();
+//session_start();
+require_once('class.php');
 if(!isset($_SESSION['id_alm'])){
   header("location: ../index.php");
 }
 //require_once('../conexion/conexion.php');
-require_once('class.php');
-$obj = new Consultas();
-$alumno = $obj->get_alum($_SESSION['id_alm']);
 
- $materia = $obj->get_materia(0, 20);
- $tecnico = $obj->get_materia(25, 14);
- $fundamental = $obj->get_materia(20, 5);
+$id_alm = $_SESSION['id_alm'];
+$obj = new Consultas();
+$alumno = $obj->get_alum($id_alm);
+//$usuario = $obj->get_usuario($_SESSION['id']);
+
+ $materia = $obj->get_materia(1);
+ $tecnico = $obj->get_materia(2);
+ $fundamental = $obj->get_materia(3);
 
 ?>
 <!DOCTYPE html>

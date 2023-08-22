@@ -33,29 +33,46 @@
                                   <tbody>
 
 
-                                    <?php
+                                  <?php
 
-                                    $j=1;
-                                    for($i=0;$i<sizeof($materia);$i++)
-                                    {
-                                    ?>
-                                     <tr>
-                                      <th scope="row"><?php echo $j; ?></th>
-                                      <td><?php echo $materia[$i]['descripcion']; ?></td>
-                                      <td><?php echo $materia[$i]['creditos']; ?></td>
-                                      <td>
-                                      <?php
-                                       $notas = $obj->get_notas($_SESSION['id_alm'], $materia[$i]['id_mat']);
+                                          $j=1;
+                                          for($i=0;$i<sizeof($materia);$i++)
+                                          {
+                                          ?>
+                                          <tr>
+                                            <th scope="row"><?php echo $j; ?></th>
+                                            <td><?php echo $materia[$i]['descripcion']; ?></td>
+                                            <td><?php echo $materia[$i]['creditos']; ?></td>
+                                            <td>
+                                            <?php
+                                            //$notas = array();
+                                          //  $notas = false;
+                                            $notas = $obj->get_notas($id_alm, $materia[$i]['id_mat']);
+                                            //echo gettype($notas);
+                                          // if (!$notas->count()){
+                                          //
+
+                                          if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                            //echo "funciona";
                                             echo $notas[0]['nota'];
-                                            //var_dump($notas);
-                                         ?>
-                                      </td>
-                                    </tr>
-                                   <?php
-                                    $j++;
-                                  }
+                                          }
+                                            // echo $notas
+                                          // }
 
-                                  ?>
+
+
+                                                // echo $notas[0]['nota'];
+
+
+                                              ?>
+                                            </td>
+                                          </tr>
+                                          <?php
+                                          $j++;
+                                          }
+
+                                         ?>
 
                                   </tbody>
                                 </table>
@@ -65,7 +82,7 @@
               <!-- /.card-body -->
             </div>
             <div class="card-body">
-              <strong ><i class="fas fa-book mr-1"></i>TECNICO SUPERIOR EN TEOLOGIA</strong>
+              <strong ><i class="fas fa-book mr-1"></i>MENSION EN TEOLOGIA BIBLICA</strong>
               <table class="table table-striped">
                                   <thead>
                                     <tr>
@@ -90,9 +107,14 @@
                                       <td><?php echo $tecnico[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                       $notas = $obj->get_notas($_SESSION['id_alm'], $tecnico[$i]['id_mat']);
-                                            echo $notas[0]['nota'];
+                                       $notas = $obj->get_notas($id_alm, $tecnico[$i]['id_mat']);
+                                           // echo $notas[0]['nota'];
                                             //var_dump($notas);
+                                            if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                              //echo "funciona";
+                                              echo $notas[0]['nota'];
+                                            }
                                          ?>
                                       </td>
                                     </tr>
@@ -110,7 +132,7 @@
               <!-- /.card-body -->
             </div>
             <div class="card-body">
-              <strong ><i class="fas fa-book mr-1"></i>CURSO FUNDAMENTAL</strong>
+              <strong ><i class="fas fa-book mr-1"></i>LICENCIATURA EN TEOLOGIA</strong>
               <table class="table table-striped">
                                   <thead>
                                     <tr>
@@ -135,9 +157,14 @@
                                       <td><?php echo $fundamental[$i]['creditos']; ?></td>
                                       <td>
                                       <?php
-                                       $notas = $obj->get_notas($_SESSION['id_alm'], $fundamental[$i]['id_mat']);
-                                            echo $notas[0]['nota'];
-                                            //var_dump($notas);
+                                       $notas = $obj->get_notas($id_alm, $fundamental[$i]['id_mat']);
+                                            //echo $notas[0]['nota'];
+                                            //var_dump($notas);*/
+                                            if(count($notas, COUNT_RECURSIVE) > 1){
+
+                                              //echo "funciona";
+                                              echo $notas[0]['nota'];
+                                            }
                                          ?>
                                       </td>
                                     </tr>
@@ -149,7 +176,7 @@
 
                                   </tbody>
                                 </table>
-                                <a href="../pdf/kardex.php?id_alm=<?php echo $_GET["alumno"];?>" class="btn btn-success">Imprimir</a>
+                                <a href="../pdf/kardex1.php?id_alm=<?php echo $id_alm;?>" class="btn btn-success">Imprimir</a>
                                 <input type="button"  name="boton3" class="btn btn-warning" id="boton3" value="Volver" onClick="history.back();" />
 
 
