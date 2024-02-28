@@ -11,9 +11,9 @@ $obj = new Consultas();
 $alumno = $obj->get_alum($id_alm);
 //$usuario = $obj->get_usuario($_SESSION['id']);
 
- $materia = $obj->get_materia(1,1);
- $tecnico = $obj->get_materia(2,1);
- $fundamental = $obj->get_materia(3,1);
+ $materia = $obj->get_materia(1,0);
+ $tecnico = $obj->get_materia(2,0);
+ $fundamental = $obj->get_materia(3,0);
 
 ?>
 <!DOCTYPE html>
@@ -68,7 +68,7 @@ $alumno = $obj->get_alum($id_alm);
 
                 <!-- Main content -->
                <?php
-               include 'bodykardex.php';
+               include 'bodykardex1.php';
                ?>
                 <!-- /.content -->
             </div>

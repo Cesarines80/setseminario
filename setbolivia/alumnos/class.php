@@ -83,14 +83,14 @@ class Consultas
 
     }
 
-    public function get_materia($i)
+    public function get_materia($i,$k)
     {
       $this->mat=array();
       //require_once('../conexion/conexion.php');
       $con = new conexion();
       $mysqli = $con->conexion();
 
-       $query = "SELECT * FROM materias WHERE estado ='1' and id_grado = $i ";
+       $query = "SELECT * FROM materias WHERE estado = $k and id_grado = $i ";
       $resultados = $mysqli->query($query);
      // $rows = $resultados->fetch_assoc();
       while($fila = $resultados->fetch_assoc())
