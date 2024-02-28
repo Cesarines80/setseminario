@@ -56,6 +56,12 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
+                                        <a href="kardex1.php" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Kardex Ant</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
                                         <a href="semestre.php" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Semestre</p>
