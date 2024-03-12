@@ -82,7 +82,7 @@
               <!-- /.card-body -->
             </div>
             <div class="card-body">
-              <strong ><i class="fas fa-book mr-1"></i>MENSION EN TEOLOGIA BIBLICA</strong>
+              <strong ><i class="fas fa-book mr-1"></i>TECNICO SUPERIOR EN TEOLOGIA</strong>
               <table class="table table-striped">
                                   <thead>
                                     <tr>
