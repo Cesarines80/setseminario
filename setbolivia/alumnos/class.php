@@ -26,6 +26,12 @@ class Consultas
 	private $promedio;
 	private $sem;
 	private $db;
+  private $mat;
+  private $notas;
+  private $prom;
+  private $mater;
+  private $resultados;
+
 
         public function __construc()
           {
@@ -47,6 +53,9 @@ class Consultas
             $this->semestre = array();
             $this->promedio = array();
             $this->sem = array();
+            $this->mat = array();
+            $this->notas = array();
+            $this->resultados = array();
           }
 
     public function get_alum($id)
@@ -83,7 +92,7 @@ class Consultas
 
     }
 
-    public function get_materia($i,$k)
+    public function get_materia($i,$k)       
     {
       $this->mat=array();
       //require_once('../conexion/conexion.php');
