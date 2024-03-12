@@ -176,7 +176,7 @@
 
                                   </tbody>
                                 </table>
-                                <a href="../pdf/kardex1.php?id_alm=<?php echo $id_alm;?>" class="btn btn-success">Imprimir</a>
+                                <a href="../pdf/kardex2.php?id_alm=<?php echo $id_alm;?>" class="btn btn-success">Imprimir</a>
                                 <input type="button"  name="boton3" class="btn btn-warning" id="boton3" value="Volver" onClick="history.back();" />
 
 

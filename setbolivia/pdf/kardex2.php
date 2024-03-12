@@ -112,7 +112,7 @@ class PDF extends FPDF
 			$this->SetFillColor(224,235,255);
 			$this->SetTextColor(0);
 			$obj = new Consultas();
-				  $datos = $obj->get_materia(1,1);
+				  $datos = $obj->get_materia(1,0);
 			   	$j=1;
 				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
@@ -147,7 +147,7 @@ class PDF extends FPDF
 
 					$this->SetFont('Arial','I',14);
 					$this->Cell(40);
-					$this->Cell(100,10,'MENSION EN TEOLOGIA BIBLICA',0,0,'C');
+					$this->Cell(100,10,'TECNICO SUPERIOR EN TEOLOGIA',0,0,'C');
 
 						$this->Ln();
 						$this->SetFillColor(3,10,73);
@@ -169,7 +169,7 @@ class PDF extends FPDF
 
 
           $obj = new Consultas();
-				  $datos = $obj->get_materia(2,1);
+				  $datos = $obj->get_materia(2,0);
 			   	$j=1;
 				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
@@ -226,7 +226,7 @@ class PDF extends FPDF
 					$this->SetTextColor(0);
 
           $obj = new Consultas();
-				  $datos = $obj->get_materia(3,1);
+				  $datos = $obj->get_materia(3,0);
 			   	$j=1;
 				for ($i = 0; $i <sizeof($datos) ; $i++)
 				{
