@@ -11,7 +11,7 @@ class conexion {
 
             private $dbpass = 'Casimiro11#';
 
-            private $dbname = 'setbolivia_set';
+            private $dbname = 'setbolivia_set-3138344196';
 
             public function conexion () {
 
